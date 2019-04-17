@@ -1,6 +1,6 @@
 node ('master'){
     stage ('checkout'){
-        checkout scm
+        //checkout scm
     }
     stage ('clean'){
         sh './build/clean.sh'
