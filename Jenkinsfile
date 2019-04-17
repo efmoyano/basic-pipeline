@@ -8,10 +8,9 @@ node ('master'){
     stage ('setup'){
         sh './build/setup.sh'
     }
-    stage ('build'){
-        sh './build/build_x64.sh'
-        sh './build/build_x86.sh'
-    }
+    
+    load './build/groovy-scripts/build.groovy'
+
     stage ('test'){
         sh './build/test.sh'
     }
